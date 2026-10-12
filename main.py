@@ -19,6 +19,10 @@ async def ping() -> dict[str, str]:
 async def pong() -> dict[str, str]:
     return {"message": "ping"}
 
+@app.get("/dog")
+async def pong() -> dict[str, str]:
+    return {"message": "cat"}
+
 @app.post("/echo")
 async def echo(payload: dict[str, Any]) -> dict[str, Any]:
     return payload
